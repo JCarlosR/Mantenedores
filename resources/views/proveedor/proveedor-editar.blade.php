@@ -20,6 +20,11 @@
                 </div>
 
                 <div class="form-group">
+                    <label for="ruc" class="control-label">R.U.C</label>
+                    <input type="text" name="ruc" class="form-control" value="{{ $proveedor->ruc }}">
+                </div>
+
+                <div class="form-group">
                     <label for="bank" class="control-label">Banco</label>
                     <input type="text" name="bank" class="form-control" value="{{ $proveedor->bank }}">
                 </div>

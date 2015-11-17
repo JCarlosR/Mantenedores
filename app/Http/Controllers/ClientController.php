@@ -23,8 +23,8 @@ class ClientController extends Controller
 
         $validator = Validator::make($request->all(), [
             'name' => 'required|max:70',
-            'ruc' => 'required|digits:11',
-            'phone' => 'min:6',
+            'ruc' => 'required|numeric|digits:11',
+            'phone' => 'min:6|numeric',
             'email' => 'email'
         ]);
 
@@ -50,13 +50,13 @@ class ClientController extends Controller
 
         $validator = Validator::make($request->all(), [
             'name' => 'required|max:70',
-            'ruc' => 'required|digits:11',
-            'phone' => 'min:6',
+            'ruc' => 'required|numeric|digits:11',
+            'phone' => 'min:6|numeric',
             'email' => 'email'
         ]);
 
         if ($validator->fails()) {
-            return redirect('cliente')
+            return redirect('clientes')
                 ->withInput()
                 ->withErrors($validator);
         }

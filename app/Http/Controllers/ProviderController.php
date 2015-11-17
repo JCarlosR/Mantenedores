@@ -55,10 +55,10 @@ class ProviderController extends Controller
 
         $validator = Validator::make($request->all(), [
             'name' => 'required|max:70',
-            'ruc' => 'required|digits:11',
+            'ruc' => 'required|numeric|digits:11',
             'address' => 'required|string',
             'bank' => 'min:3',
-            'phone' => 'required|min:6',
+            'phone' => 'required|numeric|min:6',
             'email' => 'email'
         ]);
 
